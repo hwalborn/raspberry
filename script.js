@@ -1,5 +1,7 @@
 var hotspotArray, lat, long, latLong, marker
+// var $target = $('#details')
 var showHotspots = () => {
+
   WifiApi.getJSON()
   .then((locations) => {
     hotspotArray = locations["data"]
@@ -24,7 +26,8 @@ var initGoogleMap = () => {
 
   hotspotArray.forEach((hotspot) => {
     if((parseFloat(hotspot[15]) < lat + 0.01 && parseFloat(hotspot[15]) > lat - 0.01) && (parseFloat(hotspot[16]) < long + 0.01 && parseFloat(hotspot[16]) > long - 0.01)){
-      var x = new wifiHotspot(hotspot[13], hotspot[8])
+      var x = new wifiHotspot(hotspot[13], hotspot[8], hotspot[19], hotspot[22])
+
       x.marker(parseFloat(hotspot[15]), parseFloat(hotspot[16]), map, pinImage)
     }
   })
@@ -38,7 +41,7 @@ var success = (position) => {
   initGoogleMap()
 }
 showHotspots()
-
+///// ZIPCODE//////
 var zipCode = () => {
   let zip = document.getElementById('zip').value
   let geocoder = new google.maps.Geocoder

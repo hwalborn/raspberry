@@ -24,11 +24,15 @@
     integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
     crossorigin="anonymous"></script>
     <script type="text/javascript" src="js/wrappers/api.js"></script>
+    <script type="text/javascript" src="js/views/show_details.js"></script>
     <script type="text/javascript" src="js/models/wifiHotspot.js"></script>
     <script type="text/javascript" src="script.js"></script>
   </head>
   <body>
-    <div id="map"></div>
+
+
+    <div id="map" style="display: inline-block;"></div>
+      <div id="details" style="display: inline-block;"></div>
     <form action="#" onsubmit="zipCode()">
         <input type="number" id="zip"></number>
         <input type="submit">
