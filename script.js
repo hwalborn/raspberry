@@ -1,31 +1,10 @@
 var hotspotArray, lat, long, latLong, marker
-
 var showHotspots = () => {
-  $.get('https://data.cityofnewyork.us/api/views/jd4g-ks2z/rows.json?accessType=DOWNLOAD')
+  WifiApi.getJSON()
   .then((locations) => {
     hotspotArray = locations["data"]
   }).then(navigator.geolocation.getCurrentPosition(success))
 }
-
-class wifiHotspot {
-  constructor(location, deets){
-    this.location = location
-    this.deets = deets
-  }
-   marker(lat, long, map, icon){
-    marker = new google.maps.Marker({
-      position: {lat: lat, lng: long},
-      map: map,
-      icon: icon
-    })
-    google.maps.event.addListener(marker, 'click', () => {
-      alert(this.location)
-    })
-    return marker
-  }
-}
-
-
 
 /////Google Map Stuff//////
 var initGoogleMap = () => {
@@ -58,5 +37,20 @@ var success = (position) => {
   latLong = {lat: lat, lng: long}
   initGoogleMap()
 }
-navigator.geolocation.getCurrentPosition(success)
 showHotspots()
+
+var zipCode = () => {
+  let zip = document.getElementById('zip').value
+  let geocoder = new google.maps.Geocoder
+  geocoder.geocode({address: zip}, (results, status) => {
+    if(status === "OK"){
+      lat = results[0].geometry.location.lat()
+      long = results[0].geometry.location.lng()
+      latLong = {lat: lat, lng: long}
+      initGoogleMap()
+    }else{
+      alert("YOU ARE WRONG!")
+    }
+  })
+
+}
