@@ -17,18 +17,22 @@
       }
     </style>
     <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=">
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDa_iXgVUjIQoG8aS0zMzrDWSWo8yCYuI4">
     </script>
     <script
     src="https://code.jquery.com/jquery-3.2.1.min.js"
     integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
     crossorigin="anonymous"></script>
     <script type="text/javascript" src="js/wrappers/api.js"></script>
+    <script type="text/javascript" src="js/views/show_details.js"></script>
     <script type="text/javascript" src="js/models/wifiHotspot.js"></script>
     <script type="text/javascript" src="script.js"></script>
   </head>
   <body>
-    <div id="map"></div>
+
+
+    <div id="map" style="display: inline-block;"></div>
+      <div id="details" style="display: inline-block;"></div>
     <form action="#" onsubmit="zipCode()">
         <input type="number" id="zip"></number>
         <input type="submit">

@@ -1,7 +1,10 @@
+
 class wifiHotspot {
-  constructor(location, deets){
+  constructor(location, deets, env, provider){
     this.location = location
     this.deets = deets
+    this.env = env
+    this.provider = provider
   }
    marker(lat, long, map, icon){
     marker = new google.maps.Marker({
@@ -10,7 +13,8 @@ class wifiHotspot {
       icon: icon
     })
     google.maps.event.addListener(marker, 'click', () => {
-      alert(`location: ${this.location}, deets: ${this.deets}`)
+      ShowDetails.renderDetails($('#details'), this)
+        debugger
     })
     return marker
   }
