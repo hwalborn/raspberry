@@ -17,7 +17,7 @@
       }
     </style>
     <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=">
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDnRKxOslmA9BX8D6SYv9IWFVsBhqvmiQw">
     </script>
     <script
     src="https://code.jquery.com/jquery-3.2.1.min.js"
@@ -26,15 +26,17 @@
     <script type="text/javascript" src="js/wrappers/api.js"></script>
     <script type="text/javascript" src="js/views/show_details.js"></script>
     <script type="text/javascript" src="js/models/wifiHotspot.js"></script>
-    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="js/models/google-maps.js"></script>
+    <script type="text/javascript" src="js/controllers/zip-code-controller.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
   </head>
   <body>
 
 
     <div id="map" style="display: inline-block;"></div>
       <div id="details" style="display: inline-block;"></div>
-    <form action="#" onsubmit="zipCode()">
-        <input type="number" id="zip"></number>
+    <form action="#" id="zipcode">
+        <input type="text" id="zip"></number>
         <input type="submit">
     </form>
   </body>
