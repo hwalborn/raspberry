@@ -2,27 +2,17 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <style>
-      /* Always set the map height explicitly to define the size of the div
-       * element that contains the map. */
-      #map {
-        height: 75%;
-        width: 45%;
-      }
-      /* Optional: Makes the sample page fill the window. */
-      html, body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-      }
-    </style>
-    <script async defer
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDnRKxOslmA9BX8D6SYv9IWFVsBhqvmiQw">
     </script>
     <script
     src="https://code.jquery.com/jquery-3.2.1.min.js"
     integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
     crossorigin="anonymous"></script>
+    <script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/wrappers/api.js"></script>
     <script type="text/javascript" src="js/views/show_details.js"></script>
     <script type="text/javascript" src="js/models/wifiHotspot.js"></script>
@@ -31,13 +21,21 @@
     <script type="text/javascript" src="js/app.js"></script>
   </head>
   <body>
+    <div class="page-header">
+      <img src="img/wifinder.png" id="wifinder" alt="">
+    </div>
+    <div id="map" class="col-md-6" style="display: inline-block;"></div>
+    <div id="details" class="col-md-6"></div>
+    <div class="row">
+      <div class="col-md-12">
+        <form action="#" id="zipcode">
+          <label>ZipCode</label><br>
+          <input type="text" id="zip"></number>
+          <input type="submit">
+        </form>
+      </div>
+    </div>
 
-
-    <div id="map" style="display: inline-block;"></div>
-      <div id="details" style="display: inline-block;"></div>
-    <form action="#" id="zipcode">
-        <input type="text" id="zip"></number>
-        <input type="submit">
-    </form>
+    <div class="modal"><!-- Place at bottom of page --></div>
   </body>
 </html>

@@ -19,16 +19,6 @@ class GoogleMap{
       map: map
     });
 
-    wifiHotspot.display(this.hotspotArray)
-
-    // var pinColor = "0c0";
-    // var pinImage = new google.maps.MarkerImage("http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|" + pinColor)
-    //
-    // this.hotspotArray.forEach((hotspot) => {
-    //   if((parseFloat(hotspot[15]) < lat + 0.01 && parseFloat(hotspot[15]) > lat - 0.01) && (parseFloat(hotspot[16]) < long + 0.01 && parseFloat(hotspot[16]) > long - 0.01)){
-    //     var wifi = new wifiHotspot(hotspot[13], hotspot[8], hotspot[19], hotspot[22])
-    //     wifi.marker(parseFloat(hotspot[15]), parseFloat(hotspot[16]), map, pinImage)
-    //   }
-    // })
+    wifiHotspot.display(this.hotspotArray, map)
   }
 }
