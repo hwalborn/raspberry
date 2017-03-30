@@ -11,7 +11,7 @@ class ZipCodeController{
       if(status === "OK"){
         lat = results[0].geometry.location.lat()
         long = results[0].geometry.location.lng()
-        new GoogleMap(lat, long, hotspotArray)
+        new GoogleMap(lat, long, hotspotArray,"satellite")
       }else{
         alert("YOU ARE WRONG!")
       }

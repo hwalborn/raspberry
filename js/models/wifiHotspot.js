@@ -18,6 +18,7 @@ class wifiHotspot {
     return marker
   }
 
+
   static display(hotspotArray, map){
     let pinColor = "0c0"
     let pinImage = new google.maps.MarkerImage("http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|" + pinColor)
