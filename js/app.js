@@ -6,11 +6,12 @@ var showHotspots = () => {
   }).then(navigator.geolocation.getCurrentPosition(success))
 }
 
+
 //////Geolocation Stuff/////
 var success = (position) => {
   lat = position.coords.latitude
   long = position.coords.longitude
-  new GoogleMap(lat, long, hotspotArray)
+  new GoogleMap(lat, long, hotspotArray,"terrain")
 }
 
 ///// ZIPCODE//////
