@@ -15,12 +15,15 @@ var success = (position) => {
 }
 
 ///// ZIPCODE//////
-// var zipCode = () => {
-//   new ZipCodeController(hotspotArray)
-// }
-
 $(document).on('submit', '#zipcode', (e) => {
   e.preventDefault()
   new ZipCodeController(hotspotArray)
 })
 showHotspots()
+
+$body = $("body");
+
+$(document).on({
+    ajaxStart: function() { $body.addClass("loading");    },
+     ajaxStop: function() { $body.removeClass("loading"); }
+});
