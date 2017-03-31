@@ -87,10 +87,13 @@ body.loading .modal {
 }
 
 #loading img {
-  margin: auto;
+  margin-top: 20%;
+  margin-left: 38%;
+  z-index: 100;
 }
 
 /*/////Hidden/////*/
-#hide {
-  visibility: hidden;
+#hidden {
+  height: 100%;
+  width: 100%;
 }

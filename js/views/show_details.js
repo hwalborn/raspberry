@@ -1,3 +1,5 @@
+/////The details that print out when you click on a wifi marker
+
 class ShowDetails {
   static renderDetails($target, wifidetail){
     $target.html(`
