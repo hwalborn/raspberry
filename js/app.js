@@ -1,5 +1,5 @@
 
-var hotspotArray, lat, long, marker
+var hotspotArray, lat, long, marker, myMarker
 var showHotspots = () => {
   WifiApi.getJSON()
   .then((locations) => {
@@ -13,7 +13,6 @@ var success = (position) => {
   lat = position.coords.latitude
   long = position.coords.longitude
   new GoogleMap(lat, long, hotspotArray,"terrain")
-  debugger
   $('#loading').remove()
   $('#hide').show()
 }
