@@ -1,6 +1,7 @@
 var markers = [];
 class GoogleMap{
   constructor(lat, long, hotspotArray, maptype){
+    debugger
     this.lat = lat
     this.long = long
     this.maptype = maptype
@@ -29,8 +30,9 @@ class GoogleMap{
     });
 
     google.maps.event.addListener(myMarker,'dragend',() => {
-      lat = marker.position.lat();
-      long = marker.position.lng();
+      lat = myMarker.position.lat();
+      long = myMarker.position.lng();
+      debugger
       new GoogleMap(lat,long,this.hotspotArray,this.maptype)
     })
 
