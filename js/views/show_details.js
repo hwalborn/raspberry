@@ -1,10 +1,10 @@
 class ShowDetails {
   static renderDetails($target, wifidetail){
     $target.html(`
-       <h1>name: ${wifidetail.location}</h1>
-       <h3>details: ${wifidetail.deets}</h3>
-       <p>environment: ${wifidetail.env}</p><br>
-       <p>service provider: ${wifidetail.provider}</p>
+       <h1>Name: ${wifidetail.location}</h1>
+       <h3>Details: ${wifidetail.deets}</h3>
+       <p>Environment: ${wifidetail.env}</p>
+       <p>Service Provider: ${wifidetail.provider}</p>
     `)
   }
 }

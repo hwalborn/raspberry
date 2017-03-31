@@ -1,5 +1,5 @@
 class GoogleMap{
-  constructor(lat, long, hotspotArray,maptype){
+  constructor(lat, long, hotspotArray, maptype){
     this.lat = lat
     this.long = long
     this.maptype = maptype
@@ -18,8 +18,6 @@ class GoogleMap{
     if(this.maptype === "satellite"){
          map.setTilt(45);
     }
-
-
 
     new google.maps.Marker({
       position: this.latLong,
