@@ -2,8 +2,10 @@
  * element that contains the map. */
  #map {
   margin: auto;
-  height: 75%;
+  height: 65%;
   width: 45%;
+  left: 0;
+
 }
 /* Optional: Makes the sample page fill the window. */
 html, body {
@@ -13,7 +15,7 @@ html, body {
 }
 
 body{
-  background-color: #C0C0C0;
+  background-color: #ffff99;
 }
 
 
@@ -59,23 +61,25 @@ body.loading .modal {
 }
 
 #zipform {
-  margin: auto;
+  /*margin: auto;*/
   display: block;
 }
 
 #zipcode label {
-
+/*margin: 25px;*/
 }
 
 #zip {
 
   background-color: #cceeff;
-  font-size: 30px;
-
+  font-size: 20px;
+}
+.container{
+  text-align: center;
 }
 #button{
   background-color: #ffcccc;
-  margin: 25px;
+
   font-style: italic;
   font-size: 20px;
 }
@@ -109,4 +113,7 @@ body.loading .modal {
 #hidden {
   height: 100%;
   width: 100%;
+}
+#wrapper {
+  position: flex;
 }
