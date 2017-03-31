@@ -24,12 +24,18 @@ class GoogleMap{
          map.setTilt(45);
     }
 
-    new google.maps.Marker({
+  var marker =  new google.maps.Marker({
       position: this.latLong,
       map: map,
-
+      draggable: true
 
     });
+    google.maps.event.addListener(marker,'dragend',() => {
+      lat = marker.position.lat();
+      long = marker.position.lng();
+      new GoogleMap(lat,long,this.hotspotArray,this.maptype)
+    })
+
 
     wifiHotspot.display(this.hotspotArray, map)
   }
