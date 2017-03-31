@@ -83,7 +83,11 @@ body.loading .modal {
 #loading {
   height: 100%;
   width: 100%;
-  background-color: black;
+  background-color: #1C1C1C;
+}
+
+#loading img {
+  margin: auto;
 }
 
 /*/////Hidden/////*/
