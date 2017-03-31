@@ -63,8 +63,21 @@ body.loading .modal {
   display: block;
 }
 
-#zipcode {
+#zipcode label {
 
+}
+
+#zip {
+
+  background-color: #cceeff;
+  font-size: 30px;
+
+}
+#button{
+  background-color: #ffcccc;
+  margin: 25px;
+  font-style: italic;
+  font-size: 20px;
 }
 
 /*/////Image Logo/////*/
