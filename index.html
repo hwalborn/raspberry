@@ -2,17 +2,14 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap-theme.min.css">
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap-theme.min.css">
     <script
-    src="https://maps.googleapis.com/maps/api/js?key=">
+      src="https://maps.googleapis.com/maps/api/js?key=">
     </script>
-    <script
-    src="https://code.jquery.com/jquery-3.2.1.min.js"
-    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-    crossorigin="anonymous"></script>
+    <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
     <script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="bundle.js"></script>
     <script type="text/javascript" src="js/wrappers/api.js"></script>
     <script type="text/javascript" src="js/views/show_details.js"></script>
     <script type="text/javascript" src="js/models/wifiHotspot.js"></script>
@@ -21,22 +18,27 @@
     <script type="text/javascript" src="js/app.js"></script>
   </head>
   <body>
-    <div class="page-header">
-      <img src="img/wifinder.png" id="wifinder" alt="">
+    <div id="loading">
+      <!-- <iframe src="//giphy.com/embed/MaXOUjkV73aO4" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/wifi-loadingicon-nobleradon-MaXOUjkV73aO4">via GIPHY</a></p> -->
     </div>
-
-
-    <div id="map" class="col-md-6" style="display: inline-block;"></div>
-    <div id="details" class="col-md-6"></div>
-    <div class="row">
-      <div class="col-md-12">
-        <form action="#" id="zipcode">
-          <label>ZipCode</label><br>
-          <input type="text" id="zip"></number>
-          <input type="submit">
-        </form>
+      <div class="page-header">
+        <img src="img/wifinder.png" id="wifinder" alt="">
       </div>
-    </div>
+      <div id="map" style="display: block;"></div>
+      <div id="details" ></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <form action="#" id="zipcode">
+              <label>ZipCode</label><br>
+              <input type="text" id="zip"></number>
+              <input type="submit">
+            </form>
+          </div>
+        </div>
 
-    <div class="modal"><!-- Place at bottom of page --></div>
+      </div>
+
+    <div class="modal">Boobs</div>
+  </body>
 </html>

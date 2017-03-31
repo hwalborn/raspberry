@@ -1,6 +1,7 @@
 /* Always set the map height explicitly to define the size of the div
  * element that contains the map. */
  #map {
+  margin: auto;
   height: 75%;
   width: 45%;
 }
@@ -12,7 +13,7 @@ html, body {
 }
 
 body{
-  background-color: orange;
+  background-color: #C0C0C0;
 }
 
 
@@ -47,21 +48,45 @@ body.loading .modal {
     display: block;
 }
 
+/*/////Wifi Details display/////*/
 #details {
   text-align: center;
   margin: auto;
-  display: inline-block;
+  display: block;
+  background-color: white;
+  border-radius: 20px;
+  width: 500px;
+}
+
+#zipform {
+  margin: auto;
+  display: block;
 }
 
 #zipcode {
-  margin-left: 45%;
+
 }
 
+/*/////Image Logo/////*/
 #wifinder {
+  margin: auto;
+  margin-top: 25px;
   height: 150px;
-  display: inline;
+  display: block;
 }
 
-div {
-  color: red;
+.page-header {
+  margin: auto;
+}
+
+/*/////Loading/////*/
+#loading {
+  height: 100%;
+  width: 100%;
+  background-color: black;
+}
+
+/*/////Hidden/////*/
+#hide {
+  visibility: hidden;
 }

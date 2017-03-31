@@ -12,11 +12,9 @@ class wifiHotspot {
       icon: icon,
       animation: google.maps.Animation.DROP
     })
-    window.setTimeout(function() {
     google.maps.event.addListener(marker, 'click', () => {
     ShowDetails.renderDetails($('#details'), this)
   })
-}, 5000);
     return marker
   }
 
