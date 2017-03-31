@@ -3,6 +3,7 @@ var hotspotArray, lat, long, marker, myMarker
 var showHotspots = () => {
   WifiApi.getJSON()
   .then((locations) => {
+    $('body').css("background-color", "1C1C1C")
     hotspotArray = locations["data"]
   }).then(navigator.geolocation.getCurrentPosition(success))
 }
@@ -12,9 +13,9 @@ var showHotspots = () => {
 var success = (position) => {
   lat = position.coords.latitude
   long = position.coords.longitude
-  new GoogleMap(lat, long, hotspotArray,"terrain")
   $('#loading').remove()
-  $('#hide').show()
+  $('#hidden').show()
+  new GoogleMap(lat, long, hotspotArray,"terrain")
 }
 
 ///// ZIPCODE//////
@@ -23,4 +24,7 @@ $(document).on('submit', '#zipcode', (e) => {
   new ZipCodeController(hotspotArray)
 })
 
-showHotspots()
+$(() => {
+  $('#hidden').hide()
+  showHotspots()
+})
