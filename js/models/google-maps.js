@@ -4,7 +4,6 @@
 
 class GoogleMap{
   constructor(lat, long, hotspotArray, maptype){
-    debugger
     this.lat = lat
     this.long = long
     this.maptype = maptype

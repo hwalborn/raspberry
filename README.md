@@ -1,1 +1,1 @@
-##Some cool stuff here, yo
+##Javascript/jQuery based project 
